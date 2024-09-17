@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif, "Roboto", 'helvetica';
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  padding: 2px;
+  border-radius: 50%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b4b4b4;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #818181;
+}
+
+
+.carousel-control-prev {
+  padding-right: 7rem;/* Position from left */
+}
+
+.carousel-control-next {
+  padding-left: 7rem;/* Position from left */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: flex; /* Use flexbox to center the icons */
+  align-items: center;
+  justify-content: center;
+  width: 5rem; /* Adjust icon width */
+  height: 5rem; /* Adjust icon height */
+  font-size: 1.5rem; /* Adjust icon size */
+  color: white; /* Icon color */
+}
+

@@ -1,20 +1,14 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './index.css'
+import React from "react";
+import Slider from "react-slick";
+import Router from "./routes";
 
 function App() {
-
   return (
-    <>
-      <Router>
-        <div className='w-full bg-white border-b-2 border-[#2E3192] drop-shadow-md sticky top-0 z-50'>
-          <Navbar/>
-        </div>
-        <Routes>
-            <Route path='/' element={<Home/>} />
-        </Routes>
-      </Router>
-    </>
-  )
+    <React.Fragment>
+     <Router/>
+    </React.Fragment>
+  );
 }
 
-export default App
+export default App;
+
