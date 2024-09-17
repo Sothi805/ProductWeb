@@ -17,7 +17,7 @@ const MenuBar = () => {
           </span>
         </div>
         <div>
-          <span>Icon</span>
+          <span>Icons</span>
           <button>Sign In</button>
         </div>
       </div>
