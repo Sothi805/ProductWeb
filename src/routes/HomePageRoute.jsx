@@ -6,7 +6,7 @@ const HomePageRoute = () => {
   return (
     <div>
       <Routes>
-        <Route >
+        <Route>
           <Route index element={<HomePage />} />
           {/* <Route path='/create' element={<DriverForm />} />
           <Route path={`:id`} element={<DriverDetailPages />} />
