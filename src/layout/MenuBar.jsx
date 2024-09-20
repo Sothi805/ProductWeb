@@ -17,7 +17,7 @@ const MenuBar = () => {
      setIsModalOpen(false);
    };
   return (
-    <div className=" w-full">
+    <div className=" w-full bg-[#7EACB5]">
       <div className="max-w-[1000px] bg-[#7EACB5] sm:max-w-[500px]: m-auto">
         <div className=" flex w-full justify-between items-center pt-2 pb-2 flex-wrap">
           <div className=" w-[65%] flex items-center justify-between sm:w-full flex-wrap">
