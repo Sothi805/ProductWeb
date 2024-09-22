@@ -5,7 +5,7 @@ import CardLayout from './component/CardLayout'
 const HonmePage = () => {
     return (
         <div className=''>
-            <div className='mx-3'>
+            <div className='sm:mx-0 min-sm:mx-3'>
                 <SlideShow />
             </div>
             <div>

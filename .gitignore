@@ -1,31 +1,28 @@
-# # Logs
-# logs
-# *.log
-# npm-debug.log*
-# yarn-debug.log*
-# yarn-error.log*
-# pnpm-debug.log*
-# lerna-debug.log*
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-# node_modules
-# dist
-# dist-ssr
-# *.local
+# testing
+/coverage
 
-# # Editor directories and files
-# .vscode/*
-# !.vscode/extensions.json
-# .idea
-# .DS_Store
-# *.suo
-# *.ntvs*
-# *.njsproj
-# *.sln
-# *.sw?
+# production
+/build
 
-# .env
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/.vscode
+.prettierrc
 
+<<<<<<< HEAD
 # # 
 node_modules
 node_modules
@@ -34,4 +31,8 @@ node_modules
 node_modules
 node_modules
 node_modules
+=======
+.env
+.env
+>>>>>>> ea66045aed5ee48feeb17c2d72167f0147c1d936
 node_modules

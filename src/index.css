@@ -82,23 +82,36 @@
 }
 
 .carousel-control-prev {
-  padding-right: 7rem;/* Position from left */
-  margin-top: -10rem !important;
+  /* padding-right: 7rem; */
+  margin-top: -13rem !important;
 }
 
 .carousel-control-next {
-  padding-left: 7rem;/* Position from left */
-  margin-top: -10rem !important;
+  /* padding-left: 7rem; */
+  margin-top: -13rem !important;
 
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  display: flex; /* Use flexbox to center the icons */
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 5rem; /* Adjust icon width */
-  height: 5rem; /* Adjust icon height */
-  font-size: 1.5rem; /* Adjust icon size */
-  color: white; /* Icon color */
+  width: 5rem;
+  height: 5rem; 
+  font-size: 1.5rem; 
+  color: white;
 }
+@media (max-width: 639px) { 
+  .carousel-control-prev {
+    /* padding-right: 7rem; */
+    margin-top: 0 !important;
+  }
+  
+  .carousel-control-next {
+    /* padding-left: 7rem; */
+    margin-top: 0 !important;
+  
+  }
+  
+ }
