@@ -1,16 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}",],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: false,
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Roboto', 'Arial', 'sans-serif'],
+        // Add any additional font families you'd like to use here
+      },
+    },
     screens: {
-      '2xl': { 'max': '1599.98px' },
-      'xl': { 'max': '1399.98px' },
-      'lg': { 'max': '1199.98px' },
-      'md': { 'max': '991.98px' },
-      'sm': { 'max': '767.98px' },
-      'xs': { 'max': '575.98px' }
+      '2xl': { 'max': '1535px' },
+      'xl': { 'max': '1280px' },
+      'min-lg': { 'min': '1023px' },
+      'lg': { 'max': '1023px' },
+      'md': { 'max': '767px' },
+      'md': { 'max': '767px' },
+      'sm': { 'max': '639px' },
     }
   },
-  plugins: [],
+ 
 }
+
