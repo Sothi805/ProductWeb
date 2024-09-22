@@ -7,7 +7,9 @@ import mkcert from "vite-plugin-mkcert";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tsconfigPaths(), svgr(), mkcert()],
+  // plugins: [react(), tsconfigPaths(), svgr(), mkcert()],
+  plugins: [react(), tsconfigPaths()],
+
   server: {
     port: 5000,
     host: true,
