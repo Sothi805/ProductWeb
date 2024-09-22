@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Logo from "../../assets/logo.png";
-import SignInModal from "../SignInModal";
+import Logo from "../assets/logo.png";
+import SignInModal from "@/components/SignInModal";
 
 const NavBar = (props: any) => {
 
   const [isVisible, setIsVisible] = useState(false);
-
+  const [openResponrsiveMenu, setOpenResponsivMenu] = useState(false);
   const toggleInput = () => {
     setIsVisible((prev) => !prev);
   };
@@ -18,13 +18,14 @@ const NavBar = (props: any) => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
   return (
     <div className=" w-full bg-[#7EACB5]">
-      <div className="max-w-[1000px] bg-[#7EACB5] sm:max-w-[500px]: m-auto">
+      <div className="max-w-[1000px] bg-[#7EACB5] mx-auto lg:px-[30px] md:px-[15px]">
         <div className=" flex w-full justify-between items-center pt-2 pb-2 flex-wrap">
-          <div className=" w-[65%] flex items-center justify-between sm:w-full flex-wrap">
-            <img src={Logo} alt="logo" className="w-36 sm:m-auto" />
-            <div className="relative sm:hidden">
+          <div className=" w-[65%] sm:w-auto flex items-center justify-between">
+            <img src={Logo} alt="logo" className="w-36 md:w-32" />
+            <div className="relative md:hidden">
               <input
                 type="text"
                 placeholder="Find Your Products..."
@@ -35,7 +36,7 @@ const NavBar = (props: any) => {
               </svg>
             </div>
             {/* mobile screen */}
-            <div className=" hidden gap-2 sm:block py-2 sm:w-full sm:flex justify-between ">
+            {/* <div className=" hidden gap-2 md:block py-2 sm:w-full justify-between ">
               {isVisible && (
                 <input
                   type="text"
@@ -46,11 +47,11 @@ const NavBar = (props: any) => {
               <svg onClick={toggleInput} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search " viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
               </svg>
-            </div>
+            </div> */}
             {/*End mobile screen */}
           </div>
-          <div className="flex gap-2">
-            <button className="relative flex items-center justify-center  py-1 px-3 bg-white rounded-md shadow-md hover:bg-gray-100 focus:outline-none">
+          <div className="flex min-sm:gap-5 sm:gap-3 items-center">
+            <button className="relative flex items-center justify-center px-[15px] py-[12px] sm:px-[12px] sm:py-[10px] bg-white rounded-md shadow-md hover:bg-gray-100 focus:outline-none">
               <span className="absolute top-1 right-0 flex items-center justify-center w-4 h-4 text-xs font-semibold text-white bg-red-500 rounded-full">
                 4
               </span>
@@ -59,17 +60,22 @@ const NavBar = (props: any) => {
               </svg>          </button>
 
             <button
-              className="bg-red-500 border border-red-500 rounded-md shadow-md box-border text-white cursor-pointer inline-block font-sans text-base outline-none py-2 px-4 text-center select-none transition-opacity duration-200 hover:bg-transparent"
+              className="bg-red-500 border border-red-500 rounded-md shadow-md box-border text-white cursor-pointer inline-block font-sans text-base outline-none min-sm:px-4 min-sm:py-[7px] sm:px-[7px] sm:py-[5px] sm:text-[14px] text-center select-none transition-opacity duration-200 hover:bg-transparent"
               onClick={openModal}
             >
               Log In
             </button>
+            <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+              <svg onClick={() => setOpenResponsivMenu(!openResponrsiveMenu)} xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" className="bi bi-list cursor-pointer text-white hidden sm:block" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+              </svg>
+            </a>
 
             <SignInModal isOpen={isModalOpen} onClose={closeModal} />
           </div>
         </div>
       </div>
-      <div className="w-full bg-white shadow-lg">
+      <div className="w-full bg-white lg:px-4 shadow-lg sm:hidden">
         <div className="h-[50px] flex gap-3 items-center max-w-[1000px] mx-auto">
           <span className="cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
@@ -94,6 +100,15 @@ const NavBar = (props: any) => {
         </div>
       </div>
 
+
+      <div className="offcanvas offcanvas-start max-w-[80%]" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div className="offcanvas-header flex justify-between border-b py-[10px]">
+          <img src={Logo} alt="logo" className="w-[100px]" />
+          <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="text-gray-400 bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+          </svg></button>
+        </div>
+      </div>
     </div>
   );
 };
