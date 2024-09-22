@@ -12,11 +12,14 @@ export default {
     screens: {
       '2xl': { 'max': '1535px' },
       'xl': { 'max': '1280px' },
+      'min-xl': { 'min': '1280px' },
       'min-lg': { 'min': '1023px' },
       'lg': { 'max': '1023px' },
       'md': { 'max': '767px' },
-      'md': { 'max': '767px' },
+      'min-md': { 'min': '767px' },
       'sm': { 'max': '639px' },
+      'd-sm': { 'max': '550px' },
+      'min-sm': { 'min': '639px' },
     }
   },
  
