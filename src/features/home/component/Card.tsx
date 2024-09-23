@@ -8,11 +8,14 @@ const Card = () => {
   const toggleFavorite = () => {
     setIsFavorited(!isFavorited);
   };
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+   
   return (
     <div className="max-w-xs rounded-lg overflow-hidden cursor-pointer shadow-sm border border-gray-200 bg-white hover:-translate-y-1 hover:shadow-gray-400 transition-all duration-300">
       {/* Image Section */}
       <img
-        className="w-full h-50 object-cover"
+        className="w-full h-50 object-cover transition-transform duration-300 transform hover:scale-105"
         src="https://glistenblossom.com/_next/image?url=https%3A%2F%2Fapi.krubkrong.com%2Fcdn%2Fimage%2Fea5ab3bc-cd92-4270-81a5-25b3680246fe.png&w=3840&q=100"
         alt="Product"
       />
@@ -61,11 +64,11 @@ const Card = () => {
             </svg>
           </button>
           <button
-            className="flex gap-3 items-center bg-gray-300 text-gray-800 text-[12px] px-[10px] rounded hover:bg-gray-400 transition duration-200"
+            className="flex gap-3 items-center bg-[#FFF4EA] text-gray-500 text-[12px] px-[10px] rounded hover:bg-gray-400 transition duration-200"
             onClick={toggleFavorite}
           >
             Favorite
-            <svg 
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
