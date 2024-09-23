@@ -1,3 +1,4 @@
+import AddToCartLayout from "@/features/home/AddToCardLayout";
 import HonmePage from "@/features/home/HonmePage";
 import App from "@/layouts/App";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -14,6 +15,7 @@ const Router = () => {
           element={<App />}
         >
           <Route path="/" element={<HonmePage />} />
+          <Route path="/add-card" element={<AddToCartLayout/>} />
            <Route path="*" element={<NotFoundPage />} />
 \        </Route>
       </Routes>
