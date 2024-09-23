@@ -143,7 +143,7 @@ const NavBar = (props: any) => {
         <Offcanvas
           show={modalShow}
           onHide={() => setModalShow(false)}
-          className="max-w-[80%]"
+          // className="max-w-[90%]"
         >
           <div className="offcanvas-header flex justify-between border-b py-[10px]">
             <img src={Logo} alt="logo" className="w-[100px]" />
@@ -176,7 +176,7 @@ const NavBar = (props: any) => {
           onHide={() => setShowAddCard(false)}
           placement="end"
           name="end"
-          style={{ maxWidth: "80%" }} // Added maxWidth
+          // className="max-w-[90%]"
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Offcanvas</Offcanvas.Title>
