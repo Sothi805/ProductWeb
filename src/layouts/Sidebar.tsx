@@ -24,7 +24,7 @@ const NavBar = (props: any) => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const route = useNavigate()
+  const route = useNavigate();
   return (
     <div className=" w-full bg-[#7EACB5]">
       <div className="max-w-[1000px] bg-[#7EACB5] mx-auto lg:px-[30px] md:px-[15px]">
@@ -48,23 +48,12 @@ const NavBar = (props: any) => {
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
               </svg>
             </div>
-            {/* mobile screen */}
-            {/* <div className=" hidden gap-2 md:block py-2 sm:w-full justify-between ">
-              {isVisible && (
-                <input
-                  type="text"
-                  placeholder="Find Your Products..."
-                  className="w-full py-2 pl-3 pr-10 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-                />
-              )}
-              <svg onClick={toggleInput} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search " viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-              </svg>
-            </div> */}
-            {/*End mobile screen */}
           </div>
           <div className="flex min-sm:gap-5 sm:gap-3 items-center">
-            <button onClick={()=>route("add-card")} className="relative flex items-center justify-center px-[15px] py-[12px] sm:px-[12px] sm:py-[10px] bg-white rounded-md shadow-md hover:bg-gray-100 focus:outline-none">
+            <button
+              onClick={() => route("add-card")}
+              className="relative flex items-center justify-center px-[15px] py-[12px] sm:px-[12px] sm:py-[10px] bg-white rounded-md shadow-md hover:bg-gray-100 focus:outline-none"
+            >
               <span className="absolute top-1 right-0 flex items-center justify-center w-4 h-4 text-xs font-semibold text-white bg-red-500 rounded-full">
                 4
               </span>
