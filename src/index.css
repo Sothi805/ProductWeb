@@ -2,14 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Poppins, sans-serif, "Roboto", 'helvetica';
+
+
+/* :root {
+  font-family: "Calibri", "Candara", "Segoe", "Segoe UI", "Optima", Arial,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #000000;
+  font-weight: 600;
+  background-color: #F9FAFB;
+  font-size: 15px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
-/* width */
+#root {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  padding: 0;
+  margin-top: 0;
+  box-sizing: content-box;
+  margin: 0;
+}
+
+.font-extrabold, */
+
+
+
+/* .title-dash::before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: rgb(230, 233, 236);
+  width: 45%;
+  bottom: 8px;
+  left: 0;
+}
+.title-dash::after{
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: rgb(230, 233, 236);
+  width: 45%;
+  bottom: 8px;
+  right: 0;
+} */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -36,23 +81,37 @@ body {
   background: #818181;
 }
 
-
 .carousel-control-prev {
-  padding-right: 7rem;/* Position from left */
+  /* padding-right: 7rem; */
+  margin-top: -13rem !important;
 }
 
 .carousel-control-next {
-  padding-left: 7rem;/* Position from left */
+  /* padding-left: 7rem; */
+  margin-top: -13rem !important;
+
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  display: flex; /* Use flexbox to center the icons */
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 5rem; /* Adjust icon width */
-  height: 5rem; /* Adjust icon height */
-  font-size: 1.5rem; /* Adjust icon size */
-  color: white; /* Icon color */
+  width: 5rem;
+  height: 5rem; 
+  font-size: 1.5rem; 
+  color: white;
 }
-
+@media (max-width: 639px) { 
+  .carousel-control-prev {
+    /* padding-right: 7rem; */
+    margin-top: 0 !important;
+  }
+  
+  .carousel-control-next {
+    /* padding-left: 7rem; */
+    margin-top: 0 !important;
+  
+  }
+  
+ }
