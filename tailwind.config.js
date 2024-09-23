@@ -19,9 +19,12 @@ export default {
       'min-md': { 'min': '767px' },
       'sm': { 'max': '639px' },
       'd-sm': { 'max': '550px' },
+      'dd-sm': { 'max': '430px' },
+      'min-dd-sm': { 'min': '430px' },
       'min-sm': { 'min': '639px' },
     }
   },
- 
+  plugins: [
+    require('@tailwindcss/line-clamp'), // Add the line-clamp plugin here
+  ],
 }
-
