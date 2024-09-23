@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = () => {
   return (
-    <div className="max-w-xs rounded-lg overflow-hidden cursor-pointer shadow-md border border-gray-200 bg-white hover:-translate-y-1 hover:shadow-[#7EACB5] transition-all duration-300">
+    <div className="max-w-xs rounded-lg overflow-hidden cursor-pointer shadow-sm border border-gray-200 bg-white hover:-translate-y-1 hover:shadow-gray-400 transition-all duration-300">
       {/* Image Section */}
       <img
         className="w-full h-50 object-cover"
