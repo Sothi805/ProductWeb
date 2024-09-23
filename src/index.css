@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
- :root {
+:root {
   font-family: "Calibri", "Candara", "Segoe", "Segoe UI", "Optima", Arial,
     sans-serif;
   line-height: 1.5;
@@ -13,7 +11,7 @@
   color-scheme: light dark;
   color: #000000;
   font-weight: 600;
-  background-color: #F9FAFB;
+  background-color: #f9fafb;
   font-size: 15px;
 
   font-synthesis: none;
@@ -22,19 +20,6 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
-#root {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  padding: 0;
-  margin-top: 0;
-  box-sizing: content-box;
-  margin: 0;
-}
-
-
-
 
 /* .title-dash::before{
   content: "";
@@ -88,7 +73,6 @@
 .carousel-control-next {
   /* padding-left: 7rem; */
   margin-top: -13rem !important;
-
 }
 
 .carousel-control-prev-icon,
@@ -97,20 +81,18 @@
   align-items: center;
   justify-content: center;
   width: 5rem;
-  height: 5rem; 
-  font-size: 1.5rem; 
+  height: 5rem;
+  font-size: 1.5rem;
   color: white;
 }
-@media (max-width: 639px) { 
+@media (max-width: 639px) {
   .carousel-control-prev {
     /* padding-right: 7rem; */
     margin-top: 0 !important;
   }
-  
+
   .carousel-control-next {
     /* padding-left: 7rem; */
     margin-top: 0 !important;
-  
   }
-  
- }
+}

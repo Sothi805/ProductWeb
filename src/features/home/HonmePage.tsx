@@ -3,7 +3,7 @@ import React from "react";
 import CardLayout from "./component/CardLayout";
 
 const HonmePage = () => {
-  const card1 = [{}, {}, {}, {}];
+  const card1 = [{}, {}, {}, {},];
   const card2 = [{}, {}, {}, {}];
 
   return (
