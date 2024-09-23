@@ -6,26 +6,15 @@ import SignInModal from "@/components/SignInModal";
 import { useNavigate } from "react-router-dom";
 
 const NavBar = (props: any) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [openResponrsiveMenu, setOpenResponsivMenu] = useState(false);
-  const toggleInput = () => {
-    setIsVisible((prev) => !prev);
-  };
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
+  // const [openResponrsiveMenu, setOpenResponsivMenu] = useState(false);
+  // const toggleInput = () => {
+  //   setIsVisible((prev) => !prev);
+  // };
+  const [showAddCard, setShowAddCard] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-  const [show, setShow] = useState(false);
+  const [showSingIn, setShowSignIn] = useState(false);
   const [modalShow, setModalShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const route = useNavigate();
   return (
     <div className=" w-full bg-[#7EACB5]">
       <div className="max-w-[1000px] bg-[#7EACB5] mx-auto lg:px-[30px] md:px-[15px]">
@@ -66,7 +55,7 @@ const NavBar = (props: any) => {
           </div>
           <div className="flex min-sm:gap-5 sm:gap-3 items-center">
             <button
-              onClick={() => route("add-card")}
+              onClick={() => setShowAddCard(true)}
               className="relative flex items-center justify-center px-[15px] py-[12px] sm:px-[12px] sm:py-[10px] bg-white rounded-md shadow-md hover:bg-gray-100 focus:outline-none"
             >
               <span className="absolute top-1 right-0 flex items-center justify-center w-4 h-4 text-xs font-semibold text-white bg-red-500 rounded-full">
@@ -86,13 +75,13 @@ const NavBar = (props: any) => {
 
             <button
               className="bg-red-500 border border-red-500 rounded-md shadow-md box-border text-white cursor-pointer inline-block font-sans text-base outline-none min-sm:px-4 min-sm:py-[7px] sm:px-[7px] sm:py-[5px] sm:text-[14px] text-center select-none transition-opacity duration-200 hover:bg-transparent"
-              onClick={() => setModalShow(true)}
+              onClick={() => setShowSignIn(true)}
             >
               Log In
             </button>
 
             <svg
-              onClick={() => handleShow()}
+              onClick={() => setModalShow(true)}
               xmlns="http://www.w3.org/2000/svg"
               width="35"
               height="35"
@@ -106,7 +95,7 @@ const NavBar = (props: any) => {
               />
             </svg>
 
-            <SignInModal show={modalShow} onHide={() => setModalShow(false)} />
+            <SignInModal show={showSingIn} setShow={setShowSignIn} />
           </div>
         </div>
       </div>
@@ -151,13 +140,17 @@ const NavBar = (props: any) => {
       </div>
 
       <>
-        <Offcanvas show={show} onHide={handleClose} className="max-w-[80%]">
+        <Offcanvas
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+          className="max-w-[80%]"
+        >
           <div className="offcanvas-header flex justify-between border-b py-[10px]">
             <img src={Logo} alt="logo" className="w-[100px]" />
             <button
               type="button"
               className="text-gray-400"
-              onClick={handleClose}
+              onClick={() => setModalShow(false)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -171,6 +164,23 @@ const NavBar = (props: any) => {
               </svg>
             </button>
           </div>
+          <Offcanvas.Body>
+            Some text as placeholder. In real life you can have the elements you
+            have chosen. Like, text, images, lists, etc.
+          </Offcanvas.Body>
+        </Offcanvas>
+      </>
+      <>
+        <Offcanvas
+          show={showAddCard}
+          onHide={() => setShowAddCard(false)}
+          placement="end"
+          name="end"
+          style={{ maxWidth: "80%" }} // Added maxWidth
+        >
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          </Offcanvas.Header>
           <Offcanvas.Body>
             Some text as placeholder. In real life you can have the elements you
             have chosen. Like, text, images, lists, etc.

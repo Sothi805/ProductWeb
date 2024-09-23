@@ -15,7 +15,6 @@ const Router = () => {
           element={<App />}
         >
           <Route path="/" element={<HonmePage />} />
-          <Route path="/add-card" element={<AddToCartLayout/>} />
            <Route path="*" element={<NotFoundPage />} />
 \        </Route>
       </Routes>
