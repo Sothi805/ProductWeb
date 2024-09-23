@@ -21,10 +21,11 @@ const NavBar = (props: any) => {
     setIsModalOpen(false);
   };
   const [show, setShow] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const route = useNavigate()
+  const route = useNavigate();
   return (
     <div className=" w-full bg-[#7EACB5]">
       <div className="max-w-[1000px] bg-[#7EACB5] mx-auto lg:px-[30px] md:px-[15px]">
@@ -64,7 +65,10 @@ const NavBar = (props: any) => {
             {/*End mobile screen */}
           </div>
           <div className="flex min-sm:gap-5 sm:gap-3 items-center">
-            <button onClick={()=>route("add-card")} className="relative flex items-center justify-center px-[15px] py-[12px] sm:px-[12px] sm:py-[10px] bg-white rounded-md shadow-md hover:bg-gray-100 focus:outline-none">
+            <button
+              onClick={() => route("add-card")}
+              className="relative flex items-center justify-center px-[15px] py-[12px] sm:px-[12px] sm:py-[10px] bg-white rounded-md shadow-md hover:bg-gray-100 focus:outline-none"
+            >
               <span className="absolute top-1 right-0 flex items-center justify-center w-4 h-4 text-xs font-semibold text-white bg-red-500 rounded-full">
                 4
               </span>
@@ -82,7 +86,7 @@ const NavBar = (props: any) => {
 
             <button
               className="bg-red-500 border border-red-500 rounded-md shadow-md box-border text-white cursor-pointer inline-block font-sans text-base outline-none min-sm:px-4 min-sm:py-[7px] sm:px-[7px] sm:py-[5px] sm:text-[14px] text-center select-none transition-opacity duration-200 hover:bg-transparent"
-              onClick={openModal}
+              onClick={() => setModalShow(true)}
             >
               Log In
             </button>
@@ -102,7 +106,7 @@ const NavBar = (props: any) => {
               />
             </svg>
 
-            <SignInModal isOpen={isModalOpen} onClose={closeModal} />
+            <SignInModal show={modalShow} onHide={() => setModalShow(false)} />
           </div>
         </div>
       </div>
