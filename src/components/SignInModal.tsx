@@ -10,15 +10,15 @@ function SignInModal({ show, setShow }: any) {
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Sign In </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Phone Number</Form.Label>
               <Form.Control
                 type="email"
-                placeholder="name@example.com"
+                placeholder="Your Phone Number"
                 autoFocus
               />
             </Form.Group>
@@ -32,12 +32,13 @@ function SignInModal({ show, setShow }: any) {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+
+          <button className="p-2 px-4 rounded-md text-white bg-blue-400" onClick={handleClose}>
             Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
+          </button>
+          {/* <Button variant="primary" onClick={handleClose}>
             Save Changes
-          </Button>
+          </Button> */}
         </Modal.Footer>
       </Modal>
     </>
